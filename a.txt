@@ -1,0 +1,26 @@
+This zip folder contains the following files/folder:
+
+- A folder called ‘Chandrakumar_s419255_Data_Collected_MScCSTE’ containing the flight and weather data files collected in CSV format
+
+- A folder called ‘Chandrakumar_s419255_Data_Merged_MScCSTE’ containing merged weather and flight data files in CSV format for the various weather data collection timings
+
+- A folder called ‘Chandrakumar_s419255_ResultsFiles_MScCSTE’ containing some output files of the results obtained following training and evaluation of the LNN, LSTM and MLP models
+
+- A folder called ‘Chandrakumar_s419255_Testing_Data_MScCSTE’ containing different test data files, depending on the timing of the weather data collection used to evaluate the models
+
+- A folder called ‘Chandrakumar_s419255_Thesis_Latex_MScCSTE’ containing the latex document files used for the thesis report
+
+- A folder called ‘Chandrakumar_s419255_Training_Data_MScCSTE’ containing different training data files, depending on the timing of the weather data collection used to train the models
+
+- A folder called ‘Chandrakumar_s419255_Validation_Data_MScCSTE’ containing different validation data files, depending on the timing of the weather data collection used to train the models
+
+- A Jupyter Notebook file called ‘Chandrakumar_s419255_CodingFile_Data_Collection_Data_Preprocessing_MScCSTE’ containing the source code for data collection and preprocessing. This file can be run on the CPU of a personal computer, making sure that all the Python libraries are installed.
+
+- A Jupyter Notebook file called ‘Chandrakumar_s419255_CodingFile_Results_MScCSTE’ containing the source code for displaying the results obtained during training and evaluation of the models in the form of graphs.
+
+- 3 Python files containing the source code for training and evaluating the LNN, LSTM and MLP models. To run these files, you need to use the platform Crescent 2 from Cranfield. You will need to import these three python files, the three Sub files and the folders containing the training, testing and validation data files into Crescent2.
+
+- 3 Sub files containing the code to submit the job to the Crescent2 system for LNN, LSTM and MLP models
+
+- A Powerpoint file called 'Chandrakumar_s419255_Poster_MScCSTE' for the thesis poster
+
