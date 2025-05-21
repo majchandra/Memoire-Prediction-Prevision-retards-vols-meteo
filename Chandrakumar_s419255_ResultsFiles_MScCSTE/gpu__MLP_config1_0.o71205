@@ -1,0 +1,855 @@
+CUDA_VISIBLE_DEVICES=GPU-0d9695e9-5701-ca6e-d4e6-b2066ff1f2b4
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: pandas in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (2.2.2)
+Requirement already satisfied: numpy>=1.22.4 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from pandas) (1.26.4)
+Requirement already satisfied: pytz>=2020.1 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from pandas) (2024.1)
+Requirement already satisfied: tzdata>=2022.7 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from pandas) (2024.1)
+Requirement already satisfied: python-dateutil>=2.8.2 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from python-dateutil>=2.8.2->pandas) (1.16.0)
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: imblearn in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (0.0)
+Requirement already satisfied: imbalanced-learn in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from imblearn) (0.12.3)
+Requirement already satisfied: joblib>=1.1.1 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from imbalanced-learn->imblearn) (1.4.2)
+Requirement already satisfied: threadpoolctl>=2.0.0 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from imbalanced-learn->imblearn) (3.5.0)
+Requirement already satisfied: scipy>=1.5.0 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from imbalanced-learn->imblearn) (1.13.1)
+Requirement already satisfied: numpy>=1.17.3 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from imbalanced-learn->imblearn) (1.26.4)
+Requirement already satisfied: scikit-learn>=1.0.2 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from imbalanced-learn->imblearn) (1.5.0)
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: torch in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (2.3.1)
+Requirement already satisfied: networkx in /mnt/beegfs/apps/software/Anaconda3/2022.10/lib/python3.9/site-packages (from torch) (2.8.4)
+Requirement already satisfied: nvidia-cusparse-cu12==12.1.0.106 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch) (12.1.0.106)
+Requirement already satisfied: nvidia-nccl-cu12==2.20.5 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch) (2.20.5)
+Requirement already satisfied: nvidia-cufft-cu12==11.0.2.54 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch) (11.0.2.54)
+Requirement already satisfied: sympy in /mnt/beegfs/apps/software/Anaconda3/2022.10/lib/python3.9/site-packages (from torch) (1.10.1)
+Requirement already satisfied: nvidia-curand-cu12==10.3.2.106 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch) (10.3.2.106)
+Requirement already satisfied: triton==2.3.1 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch) (2.3.1)
+Requirement already satisfied: fsspec in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch) (2024.6.0)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.1.105 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch) (12.1.105)
+Requirement already satisfied: nvidia-cudnn-cu12==8.9.2.26 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch) (8.9.2.26)
+Requirement already satisfied: nvidia-cusolver-cu12==11.4.5.107 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch) (11.4.5.107)
+Requirement already satisfied: nvidia-nvtx-cu12==12.1.105 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch) (12.1.105)
+Requirement already satisfied: jinja2 in /mnt/beegfs/apps/software/Anaconda3/2022.10/lib/python3.9/site-packages (from torch) (2.11.3)
+Requirement already satisfied: filelock in /mnt/beegfs/apps/software/Anaconda3/2022.10/lib/python3.9/site-packages (from torch) (3.6.0)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.1.105 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch) (12.1.105)
+Requirement already satisfied: typing-extensions>=4.8.0 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch) (4.12.1)
+Requirement already satisfied: nvidia-cublas-cu12==12.1.3.1 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch) (12.1.3.1)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.1.105 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch) (12.1.105)
+Requirement already satisfied: nvidia-nvjitlink-cu12 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from nvidia-cusolver-cu12==11.4.5.107->torch) (12.5.40)
+Requirement already satisfied: MarkupSafe>=0.23 in /mnt/beegfs/apps/software/Anaconda3/2022.10/lib/python3.9/site-packages (from jinja2->torch) (2.0.1)
+Requirement already satisfied: mpmath>=0.19 in /mnt/beegfs/apps/software/Anaconda3/2022.10/lib/python3.9/site-packages (from sympy->torch) (1.2.1)
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: scikit-learn in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (1.5.0)
+Requirement already satisfied: numpy>=1.19.5 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from scikit-learn) (1.26.4)
+Requirement already satisfied: joblib>=1.2.0 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from scikit-learn) (1.4.2)
+Requirement already satisfied: scipy>=1.6.0 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from scikit-learn) (1.13.1)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from scikit-learn) (3.5.0)
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: numpy in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (1.26.4)
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: torchdiffeq in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (0.2.4)
+Requirement already satisfied: torch>=1.5.0 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torchdiffeq) (2.3.1)
+Requirement already satisfied: scipy>=1.4.0 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torchdiffeq) (1.13.1)
+Requirement already satisfied: numpy<2.3,>=1.22.4 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from scipy>=1.4.0->torchdiffeq) (1.26.4)
+Requirement already satisfied: filelock in /mnt/beegfs/apps/software/Anaconda3/2022.10/lib/python3.9/site-packages (from torch>=1.5.0->torchdiffeq) (3.6.0)
+Requirement already satisfied: jinja2 in /mnt/beegfs/apps/software/Anaconda3/2022.10/lib/python3.9/site-packages (from torch>=1.5.0->torchdiffeq) (2.11.3)
+Requirement already satisfied: fsspec in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch>=1.5.0->torchdiffeq) (2024.6.0)
+Requirement already satisfied: nvidia-nvtx-cu12==12.1.105 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch>=1.5.0->torchdiffeq) (12.1.105)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.1.105 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch>=1.5.0->torchdiffeq) (12.1.105)
+Requirement already satisfied: sympy in /mnt/beegfs/apps/software/Anaconda3/2022.10/lib/python3.9/site-packages (from torch>=1.5.0->torchdiffeq) (1.10.1)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.1.105 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch>=1.5.0->torchdiffeq) (12.1.105)
+Requirement already satisfied: triton==2.3.1 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch>=1.5.0->torchdiffeq) (2.3.1)
+Requirement already satisfied: typing-extensions>=4.8.0 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch>=1.5.0->torchdiffeq) (4.12.1)
+Requirement already satisfied: nvidia-curand-cu12==10.3.2.106 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch>=1.5.0->torchdiffeq) (10.3.2.106)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.1.105 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch>=1.5.0->torchdiffeq) (12.1.105)
+Requirement already satisfied: nvidia-cufft-cu12==11.0.2.54 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch>=1.5.0->torchdiffeq) (11.0.2.54)
+Requirement already satisfied: networkx in /mnt/beegfs/apps/software/Anaconda3/2022.10/lib/python3.9/site-packages (from torch>=1.5.0->torchdiffeq) (2.8.4)
+Requirement already satisfied: nvidia-cudnn-cu12==8.9.2.26 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch>=1.5.0->torchdiffeq) (8.9.2.26)
+Requirement already satisfied: nvidia-cusparse-cu12==12.1.0.106 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch>=1.5.0->torchdiffeq) (12.1.0.106)
+Requirement already satisfied: nvidia-nccl-cu12==2.20.5 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch>=1.5.0->torchdiffeq) (2.20.5)
+Requirement already satisfied: nvidia-cusolver-cu12==11.4.5.107 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch>=1.5.0->torchdiffeq) (11.4.5.107)
+Requirement already satisfied: nvidia-cublas-cu12==12.1.3.1 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from torch>=1.5.0->torchdiffeq) (12.1.3.1)
+Requirement already satisfied: nvidia-nvjitlink-cu12 in /mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages (from nvidia-cusolver-cu12==11.4.5.107->torch>=1.5.0->torchdiffeq) (12.5.40)
+Requirement already satisfied: MarkupSafe>=0.23 in /mnt/beegfs/apps/software/Anaconda3/2022.10/lib/python3.9/site-packages (from jinja2->torch>=1.5.0->torchdiffeq) (2.0.1)
+Requirement already satisfied: mpmath>=0.19 in /mnt/beegfs/apps/software/Anaconda3/2022.10/lib/python3.9/site-packages (from sympy->torch>=1.5.0->torchdiffeq) (1.2.1)
+/mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages/pandas/core/computation/expressions.py:21: UserWarning: Pandas requires version '2.8.4' or newer of 'numexpr' (version '2.8.3' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/mnt/beegfs/home/s419255/.local/lib/python3.9/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+42
+cuda
+0h
+Testing configuration: batch_size=1024, num_epochs=10, learning_rate=0.001, dropout=0.5, hidden_size=[128, 64, 32]
+Epoch 1/10, Train Loss: 0.6548, Val Loss: 0.4385
+Epoch 2/10, Train Loss: 0.5793, Val Loss: 0.4305
+Epoch 3/10, Train Loss: 0.5582, Val Loss: 0.3959
+Epoch 4/10, Train Loss: 0.5490, Val Loss: 0.3722
+Epoch 5/10, Train Loss: 0.5442, Val Loss: 0.3757
+Epoch 6/10, Train Loss: 0.5392, Val Loss: 0.3799
+Epoch 7/10, Train Loss: 0.5373, Val Loss: 0.3904
+Epoch 8/10, Train Loss: 0.5343, Val Loss: 0.3784
+Epoch 9/10, Train Loss: 0.5315, Val Loss: 0.3789
+Epoch 10/10, Train Loss: 0.5314, Val Loss: 0.3787
+Total training time: 201.2733s
+
+Confusion Matrix:
+[[176602  16805   1562]
+ [  7608  34255  11729]
+ [   135    675   2329]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.96      0.91      0.93    194969
+           1       0.66      0.64      0.65     53592
+           2       0.15      0.74      0.25      3139
+
+    accuracy                           0.85    251700
+   macro avg       0.59      0.76      0.61    251700
+weighted avg       0.88      0.85      0.86    251700
+
+
+Global Accuracy: 0.8470
+Total evaluation time: 3.0697s
+Test Loss: 0.3806
+Testing configuration: batch_size=1024, num_epochs=10, learning_rate=0.001, dropout=0.5, hidden_size=[256, 128, 64]
+Epoch 1/10, Train Loss: 0.6163, Val Loss: 0.4207
+Epoch 2/10, Train Loss: 0.5505, Val Loss: 0.4271
+Epoch 3/10, Train Loss: 0.5270, Val Loss: 0.3837
+Epoch 4/10, Train Loss: 0.5166, Val Loss: 0.4097
+Epoch 5/10, Train Loss: 0.5101, Val Loss: 0.3761
+Epoch 6/10, Train Loss: 0.5059, Val Loss: 0.3603
+Epoch 7/10, Train Loss: 0.5024, Val Loss: 0.3723
+Epoch 8/10, Train Loss: 0.5000, Val Loss: 0.3735
+Epoch 9/10, Train Loss: 0.4988, Val Loss: 0.3637
+Epoch 10/10, Train Loss: 0.4974, Val Loss: 0.3753
+Total training time: 197.1121s
+
+Confusion Matrix:
+[[177483  15324   2162]
+ [  7743  33709  12140]
+ [   125    603   2411]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.96      0.91      0.93    194969
+           1       0.68      0.63      0.65     53592
+           2       0.14      0.77      0.24      3139
+
+    accuracy                           0.85    251700
+   macro avg       0.59      0.77      0.61    251700
+weighted avg       0.89      0.85      0.87    251700
+
+
+Global Accuracy: 0.8486
+Total evaluation time: 3.0716s
+Test Loss: 0.3776
+Testing configuration: batch_size=1024, num_epochs=10, learning_rate=0.001, dropout=0.5, hidden_size=[512, 256, 128]
+Epoch 1/10, Train Loss: 0.5891, Val Loss: 0.4022
+Epoch 2/10, Train Loss: 0.5283, Val Loss: 0.3658
+Epoch 3/10, Train Loss: 0.5058, Val Loss: 0.3608
+Epoch 4/10, Train Loss: 0.4922, Val Loss: 0.4024
+Epoch 5/10, Train Loss: 0.4838, Val Loss: 0.4074
+Epoch 6/10, Train Loss: 0.4773, Val Loss: 0.3528
+Epoch 7/10, Train Loss: 0.4741, Val Loss: 0.3508
+Epoch 8/10, Train Loss: 0.4718, Val Loss: 0.3551
+Epoch 9/10, Train Loss: 0.4677, Val Loss: 0.3804
+Epoch 10/10, Train Loss: 0.4655, Val Loss: 0.3680
+Total training time: 200.4255s
+
+Confusion Matrix:
+[[177250  15051   2668]
+ [  7712  35046  10834]
+ [   117    655   2367]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.96      0.91      0.93    194969
+           1       0.69      0.65      0.67     53592
+           2       0.15      0.75      0.25      3139
+
+    accuracy                           0.85    251700
+   macro avg       0.60      0.77      0.62    251700
+weighted avg       0.89      0.85      0.87    251700
+
+
+Global Accuracy: 0.8529
+Total evaluation time: 3.1230s
+Test Loss: 0.3698
+Testing configuration: batch_size=1024, num_epochs=10, learning_rate=0.0001, dropout=0.5, hidden_size=[128, 64, 32]
+Epoch 1/10, Train Loss: 0.8155, Val Loss: 0.5179
+Epoch 2/10, Train Loss: 0.6877, Val Loss: 0.4845
+Epoch 3/10, Train Loss: 0.6554, Val Loss: 0.4685
+Epoch 4/10, Train Loss: 0.6378, Val Loss: 0.4619
+Epoch 5/10, Train Loss: 0.6258, Val Loss: 0.4529
+Epoch 6/10, Train Loss: 0.6158, Val Loss: 0.4528
+Epoch 7/10, Train Loss: 0.6087, Val Loss: 0.4340
+Epoch 8/10, Train Loss: 0.6018, Val Loss: 0.4326
+Epoch 9/10, Train Loss: 0.5965, Val Loss: 0.4324
+Epoch 10/10, Train Loss: 0.5915, Val Loss: 0.4261
+Total training time: 197.9023s
+
+Confusion Matrix:
+[[177348  16267   1354]
+ [  8555  32483  12554]
+ [   149    689   2301]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.95      0.91      0.93    194969
+           1       0.66      0.61      0.63     53592
+           2       0.14      0.73      0.24      3139
+
+    accuracy                           0.84    251700
+   macro avg       0.58      0.75      0.60    251700
+weighted avg       0.88      0.84      0.86    251700
+
+
+Global Accuracy: 0.8428
+Total evaluation time: 2.9262s
+Test Loss: 0.4287
+Testing configuration: batch_size=1024, num_epochs=10, learning_rate=0.0001, dropout=0.5, hidden_size=[256, 128, 64]
+Epoch 1/10, Train Loss: 0.7468, Val Loss: 0.5010
+Epoch 2/10, Train Loss: 0.6440, Val Loss: 0.4781
+Epoch 3/10, Train Loss: 0.6171, Val Loss: 0.4474
+Epoch 4/10, Train Loss: 0.6005, Val Loss: 0.4366
+Epoch 5/10, Train Loss: 0.5901, Val Loss: 0.4409
+Epoch 6/10, Train Loss: 0.5816, Val Loss: 0.4393
+Epoch 7/10, Train Loss: 0.5752, Val Loss: 0.4170
+Epoch 8/10, Train Loss: 0.5687, Val Loss: 0.4254
+Epoch 9/10, Train Loss: 0.5633, Val Loss: 0.4285
+Epoch 10/10, Train Loss: 0.5578, Val Loss: 0.4080
+Total training time: 197.9504s
+
+Confusion Matrix:
+[[177868  15617   1484]
+ [  8577  32934  12081]
+ [   147    664   2328]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.95      0.91      0.93    194969
+           1       0.67      0.61      0.64     53592
+           2       0.15      0.74      0.24      3139
+
+    accuracy                           0.85    251700
+   macro avg       0.59      0.76      0.61    251700
+weighted avg       0.88      0.85      0.86    251700
+
+
+Global Accuracy: 0.8468
+Total evaluation time: 2.9081s
+Test Loss: 0.4104
+Testing configuration: batch_size=1024, num_epochs=10, learning_rate=0.0001, dropout=0.5, hidden_size=[512, 256, 128]
+Epoch 1/10, Train Loss: 0.6918, Val Loss: 0.4774
+Epoch 2/10, Train Loss: 0.6089, Val Loss: 0.4555
+Epoch 3/10, Train Loss: 0.5875, Val Loss: 0.4324
+Epoch 4/10, Train Loss: 0.5750, Val Loss: 0.4365
+Epoch 5/10, Train Loss: 0.5642, Val Loss: 0.4299
+Epoch 6/10, Train Loss: 0.5555, Val Loss: 0.4223
+Epoch 7/10, Train Loss: 0.5481, Val Loss: 0.4164
+Epoch 8/10, Train Loss: 0.5412, Val Loss: 0.4070
+Epoch 9/10, Train Loss: 0.5354, Val Loss: 0.4158
+Epoch 10/10, Train Loss: 0.5294, Val Loss: 0.4016
+Total training time: 200.7936s
+
+Confusion Matrix:
+[[177351  15745   1873]
+ [  8341  32820  12431]
+ [   141    615   2383]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.95      0.91      0.93    194969
+           1       0.67      0.61      0.64     53592
+           2       0.14      0.76      0.24      3139
+
+    accuracy                           0.84    251700
+   macro avg       0.59      0.76      0.60    251700
+weighted avg       0.88      0.84      0.86    251700
+
+
+Global Accuracy: 0.8445
+Total evaluation time: 2.9211s
+Test Loss: 0.4037
+Testing configuration: batch_size=1024, num_epochs=20, learning_rate=0.001, dropout=0.5, hidden_size=[128, 64, 32]
+Epoch 1/20, Train Loss: 0.6542, Val Loss: 0.4394
+Epoch 2/20, Train Loss: 0.5825, Val Loss: 0.4444
+Epoch 3/20, Train Loss: 0.5595, Val Loss: 0.3904
+Epoch 4/20, Train Loss: 0.5488, Val Loss: 0.3528
+Epoch 5/20, Train Loss: 0.5441, Val Loss: 0.3578
+Epoch 6/20, Train Loss: 0.5404, Val Loss: 0.3526
+Epoch 7/20, Train Loss: 0.5383, Val Loss: 0.3630
+Epoch 8/20, Train Loss: 0.5363, Val Loss: 0.4056
+Epoch 9/20, Train Loss: 0.5341, Val Loss: 0.3752
+Epoch 10/20, Train Loss: 0.5319, Val Loss: 0.3558
+Epoch 11/20, Train Loss: 0.5312, Val Loss: 0.3925
+Epoch 12/20, Train Loss: 0.5290, Val Loss: 0.3820
+Epoch 13/20, Train Loss: 0.5283, Val Loss: 0.3986
+Epoch 14/20, Train Loss: 0.5275, Val Loss: 0.3349
+Epoch 15/20, Train Loss: 0.5271, Val Loss: 0.3669
+Epoch 16/20, Train Loss: 0.5256, Val Loss: 0.3795
+Epoch 17/20, Train Loss: 0.5247, Val Loss: 0.3590
+Epoch 18/20, Train Loss: 0.5247, Val Loss: 0.3686
+Epoch 19/20, Train Loss: 0.5240, Val Loss: 0.3729
+Epoch 20/20, Train Loss: 0.5229, Val Loss: 0.3410
+Total training time: 403.7172s
+
+Confusion Matrix:
+[[183904  10023   1042]
+ [  9851  32655  11086]
+ [   163    666   2310]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.95      0.94      0.95    194969
+           1       0.75      0.61      0.67     53592
+           2       0.16      0.74      0.26      3139
+
+    accuracy                           0.87    251700
+   macro avg       0.62      0.76      0.63    251700
+weighted avg       0.90      0.87      0.88    251700
+
+
+Global Accuracy: 0.8696
+Total evaluation time: 3.2128s
+Test Loss: 0.3428
+Testing configuration: batch_size=1024, num_epochs=20, learning_rate=0.001, dropout=0.5, hidden_size=[256, 128, 64]
+Epoch 1/20, Train Loss: 0.6164, Val Loss: 0.4341
+Epoch 2/20, Train Loss: 0.5487, Val Loss: 0.4038
+Epoch 3/20, Train Loss: 0.5282, Val Loss: 0.3745
+Epoch 4/20, Train Loss: 0.5169, Val Loss: 0.3497
+Epoch 5/20, Train Loss: 0.5100, Val Loss: 0.3676
+Epoch 6/20, Train Loss: 0.5068, Val Loss: 0.3465
+Epoch 7/20, Train Loss: 0.5036, Val Loss: 0.3650
+Epoch 8/20, Train Loss: 0.5011, Val Loss: 0.3560
+Epoch 9/20, Train Loss: 0.4994, Val Loss: 0.3575
+Epoch 10/20, Train Loss: 0.4977, Val Loss: 0.3698
+Epoch 11/20, Train Loss: 0.4970, Val Loss: 0.3710
+Epoch 12/20, Train Loss: 0.4956, Val Loss: 0.3607
+Epoch 13/20, Train Loss: 0.4944, Val Loss: 0.3546
+Epoch 14/20, Train Loss: 0.4923, Val Loss: 0.3577
+Epoch 15/20, Train Loss: 0.4924, Val Loss: 0.3817
+Epoch 16/20, Train Loss: 0.4911, Val Loss: 0.3601
+Epoch 17/20, Train Loss: 0.4905, Val Loss: 0.3446
+Epoch 18/20, Train Loss: 0.4894, Val Loss: 0.3454
+Epoch 19/20, Train Loss: 0.4891, Val Loss: 0.3346
+Epoch 20/20, Train Loss: 0.4888, Val Loss: 0.3632
+Total training time: 404.9332s
+
+Confusion Matrix:
+[[179383  13390   2196]
+ [  8244  33571  11777]
+ [   127    625   2387]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.96      0.92      0.94    194969
+           1       0.71      0.63      0.66     53592
+           2       0.15      0.76      0.24      3139
+
+    accuracy                           0.86    251700
+   macro avg       0.60      0.77      0.62    251700
+weighted avg       0.89      0.86      0.87    251700
+
+
+Global Accuracy: 0.8555
+Total evaluation time: 3.1452s
+Test Loss: 0.3649
+Testing configuration: batch_size=1024, num_epochs=20, learning_rate=0.001, dropout=0.5, hidden_size=[512, 256, 128]
+Epoch 1/20, Train Loss: 0.5904, Val Loss: 0.3974
+Epoch 2/20, Train Loss: 0.5261, Val Loss: 0.3799
+Epoch 3/20, Train Loss: 0.5029, Val Loss: 0.3859
+Epoch 4/20, Train Loss: 0.4898, Val Loss: 0.3638
+Epoch 5/20, Train Loss: 0.4811, Val Loss: 0.3937
+Epoch 6/20, Train Loss: 0.4760, Val Loss: 0.3621
+Epoch 7/20, Train Loss: 0.4723, Val Loss: 0.3498
+Epoch 8/20, Train Loss: 0.4684, Val Loss: 0.3818
+Epoch 9/20, Train Loss: 0.4657, Val Loss: 0.3494
+Epoch 10/20, Train Loss: 0.4628, Val Loss: 0.3688
+Epoch 11/20, Train Loss: 0.4612, Val Loss: 0.3557
+Epoch 12/20, Train Loss: 0.4594, Val Loss: 0.3420
+Epoch 13/20, Train Loss: 0.4582, Val Loss: 0.3172
+Epoch 14/20, Train Loss: 0.4564, Val Loss: 0.3605
+Epoch 15/20, Train Loss: 0.4555, Val Loss: 0.3527
+Epoch 16/20, Train Loss: 0.4540, Val Loss: 0.3544
+Epoch 17/20, Train Loss: 0.4527, Val Loss: 0.3488
+Epoch 18/20, Train Loss: 0.4520, Val Loss: 0.3389
+Epoch 19/20, Train Loss: 0.4515, Val Loss: 0.3526
+Epoch 20/20, Train Loss: 0.4497, Val Loss: 0.3589
+Total training time: 410.0222s
+
+Confusion Matrix:
+[[176107  15775   3087]
+ [  7423  35796  10373]
+ [   115    666   2358]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.96      0.90      0.93    194969
+           1       0.69      0.67      0.68     53592
+           2       0.15      0.75      0.25      3139
+
+    accuracy                           0.85    251700
+   macro avg       0.60      0.77      0.62    251700
+weighted avg       0.89      0.85      0.87    251700
+
+
+Global Accuracy: 0.8513
+Total evaluation time: 3.1450s
+Test Loss: 0.3604
+Testing configuration: batch_size=1024, num_epochs=20, learning_rate=0.0001, dropout=0.5, hidden_size=[128, 64, 32]
+Epoch 1/20, Train Loss: 0.8287, Val Loss: 0.5353
+Epoch 2/20, Train Loss: 0.6925, Val Loss: 0.4953
+Epoch 3/20, Train Loss: 0.6584, Val Loss: 0.4795
+Epoch 4/20, Train Loss: 0.6395, Val Loss: 0.4613
+Epoch 5/20, Train Loss: 0.6263, Val Loss: 0.4489
+Epoch 6/20, Train Loss: 0.6156, Val Loss: 0.4473
+Epoch 7/20, Train Loss: 0.6069, Val Loss: 0.4514
+Epoch 8/20, Train Loss: 0.6000, Val Loss: 0.4259
+Epoch 9/20, Train Loss: 0.5939, Val Loss: 0.4287
+Epoch 10/20, Train Loss: 0.5886, Val Loss: 0.4227
+Epoch 11/20, Train Loss: 0.5833, Val Loss: 0.4123
+Epoch 12/20, Train Loss: 0.5793, Val Loss: 0.4048
+Epoch 13/20, Train Loss: 0.5756, Val Loss: 0.4093
+Epoch 14/20, Train Loss: 0.5724, Val Loss: 0.4004
+Epoch 15/20, Train Loss: 0.5688, Val Loss: 0.4036
+Epoch 16/20, Train Loss: 0.5664, Val Loss: 0.4053
+Epoch 17/20, Train Loss: 0.5631, Val Loss: 0.3985
+Epoch 18/20, Train Loss: 0.5603, Val Loss: 0.3934
+Epoch 19/20, Train Loss: 0.5582, Val Loss: 0.3960
+Epoch 20/20, Train Loss: 0.5559, Val Loss: 0.3891
+Total training time: 404.0801s
+
+Confusion Matrix:
+[[179856  13699   1414]
+ [  8500  32611  12481]
+ [   147    662   2330]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.95      0.92      0.94    194969
+           1       0.69      0.61      0.65     53592
+           2       0.14      0.74      0.24      3139
+
+    accuracy                           0.85    251700
+   macro avg       0.60      0.76      0.61    251700
+weighted avg       0.89      0.85      0.87    251700
+
+
+Global Accuracy: 0.8534
+Total evaluation time: 3.1989s
+Test Loss: 0.3917
+Testing configuration: batch_size=1024, num_epochs=20, learning_rate=0.0001, dropout=0.5, hidden_size=[256, 128, 64]
+Epoch 1/20, Train Loss: 0.7539, Val Loss: 0.4971
+Epoch 2/20, Train Loss: 0.6444, Val Loss: 0.4609
+Epoch 3/20, Train Loss: 0.6176, Val Loss: 0.4538
+Epoch 4/20, Train Loss: 0.6017, Val Loss: 0.4388
+Epoch 5/20, Train Loss: 0.5904, Val Loss: 0.4381
+Epoch 6/20, Train Loss: 0.5816, Val Loss: 0.4223
+Epoch 7/20, Train Loss: 0.5737, Val Loss: 0.4257
+Epoch 8/20, Train Loss: 0.5668, Val Loss: 0.4235
+Epoch 9/20, Train Loss: 0.5610, Val Loss: 0.4048
+Epoch 10/20, Train Loss: 0.5547, Val Loss: 0.4101
+Epoch 11/20, Train Loss: 0.5495, Val Loss: 0.4059
+Epoch 12/20, Train Loss: 0.5451, Val Loss: 0.3889
+Epoch 13/20, Train Loss: 0.5408, Val Loss: 0.3906
+Epoch 14/20, Train Loss: 0.5373, Val Loss: 0.3819
+Epoch 15/20, Train Loss: 0.5337, Val Loss: 0.3964
+Epoch 16/20, Train Loss: 0.5307, Val Loss: 0.3892
+Epoch 17/20, Train Loss: 0.5280, Val Loss: 0.3787
+Epoch 18/20, Train Loss: 0.5253, Val Loss: 0.3824
+Epoch 19/20, Train Loss: 0.5224, Val Loss: 0.3831
+Epoch 20/20, Train Loss: 0.5200, Val Loss: 0.3694
+Total training time: 403.2392s
+
+Confusion Matrix:
+[[180477  12841   1651]
+ [  8658  32915  12019]
+ [   145    633   2361]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.95      0.93      0.94    194969
+           1       0.71      0.61      0.66     53592
+           2       0.15      0.75      0.25      3139
+
+    accuracy                           0.86    251700
+   macro avg       0.60      0.76      0.61    251700
+weighted avg       0.89      0.86      0.87    251700
+
+
+Global Accuracy: 0.8572
+Total evaluation time: 3.0966s
+Test Loss: 0.3712
+Testing configuration: batch_size=1024, num_epochs=20, learning_rate=0.0001, dropout=0.5, hidden_size=[512, 256, 128]
+Epoch 1/20, Train Loss: 0.6902, Val Loss: 0.4768
+Epoch 2/20, Train Loss: 0.6074, Val Loss: 0.4541
+Epoch 3/20, Train Loss: 0.5852, Val Loss: 0.4328
+Epoch 4/20, Train Loss: 0.5721, Val Loss: 0.4382
+Epoch 5/20, Train Loss: 0.5620, Val Loss: 0.4306
+Epoch 6/20, Train Loss: 0.5532, Val Loss: 0.4220
+Epoch 7/20, Train Loss: 0.5462, Val Loss: 0.4068
+Epoch 8/20, Train Loss: 0.5395, Val Loss: 0.4061
+Epoch 9/20, Train Loss: 0.5340, Val Loss: 0.3997
+Epoch 10/20, Train Loss: 0.5283, Val Loss: 0.4057
+Epoch 11/20, Train Loss: 0.5236, Val Loss: 0.3924
+Epoch 12/20, Train Loss: 0.5187, Val Loss: 0.3952
+Epoch 13/20, Train Loss: 0.5142, Val Loss: 0.3883
+Epoch 14/20, Train Loss: 0.5105, Val Loss: 0.3827
+Epoch 15/20, Train Loss: 0.5062, Val Loss: 0.3766
+Epoch 16/20, Train Loss: 0.5026, Val Loss: 0.3701
+Epoch 17/20, Train Loss: 0.4993, Val Loss: 0.3779
+Epoch 18/20, Train Loss: 0.4957, Val Loss: 0.3694
+Epoch 19/20, Train Loss: 0.4926, Val Loss: 0.3640
+Epoch 20/20, Train Loss: 0.4892, Val Loss: 0.3568
+Total training time: 406.9273s
+
+Confusion Matrix:
+[[182014  11084   1871]
+ [  9204  32729  11659]
+ [   148    614   2377]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.95      0.93      0.94    194969
+           1       0.74      0.61      0.67     53592
+           2       0.15      0.76      0.25      3139
+
+    accuracy                           0.86    251700
+   macro avg       0.61      0.77      0.62    251700
+weighted avg       0.90      0.86      0.88    251700
+
+
+Global Accuracy: 0.8626
+Total evaluation time: 3.1289s
+Test Loss: 0.3592
+Testing configuration: batch_size=1024, num_epochs=30, learning_rate=0.001, dropout=0.5, hidden_size=[128, 64, 32]
+Epoch 1/30, Train Loss: 0.6524, Val Loss: 0.4388
+Epoch 2/30, Train Loss: 0.5787, Val Loss: 0.3843
+Epoch 3/30, Train Loss: 0.5576, Val Loss: 0.3865
+Epoch 4/30, Train Loss: 0.5482, Val Loss: 0.4283
+Epoch 5/30, Train Loss: 0.5438, Val Loss: 0.3534
+Epoch 6/30, Train Loss: 0.5405, Val Loss: 0.3650
+Epoch 7/30, Train Loss: 0.5373, Val Loss: 0.3666
+Epoch 8/30, Train Loss: 0.5344, Val Loss: 0.3980
+Epoch 9/30, Train Loss: 0.5327, Val Loss: 0.3592
+Epoch 10/30, Train Loss: 0.5307, Val Loss: 0.4013
+Epoch 11/30, Train Loss: 0.5295, Val Loss: 0.3532
+Epoch 12/30, Train Loss: 0.5292, Val Loss: 0.3772
+Epoch 13/30, Train Loss: 0.5280, Val Loss: 0.3767
+Epoch 14/30, Train Loss: 0.5267, Val Loss: 0.3656
+Epoch 15/30, Train Loss: 0.5266, Val Loss: 0.3680
+Epoch 16/30, Train Loss: 0.5260, Val Loss: 0.3657
+Epoch 17/30, Train Loss: 0.5255, Val Loss: 0.3762
+Epoch 18/30, Train Loss: 0.5252, Val Loss: 0.3614
+Epoch 19/30, Train Loss: 0.5240, Val Loss: 0.3880
+Epoch 20/30, Train Loss: 0.5242, Val Loss: 0.3671
+Epoch 21/30, Train Loss: 0.5239, Val Loss: 0.4050
+Epoch 22/30, Train Loss: 0.5231, Val Loss: 0.3732
+Epoch 23/30, Train Loss: 0.5220, Val Loss: 0.3856
+Epoch 24/30, Train Loss: 0.5220, Val Loss: 0.4157
+Epoch 25/30, Train Loss: 0.5218, Val Loss: 0.3665
+Epoch 26/30, Train Loss: 0.5212, Val Loss: 0.3778
+Epoch 27/30, Train Loss: 0.5216, Val Loss: 0.3802
+Epoch 28/30, Train Loss: 0.5210, Val Loss: 0.3608
+Epoch 29/30, Train Loss: 0.5204, Val Loss: 0.3543
+Epoch 30/30, Train Loss: 0.5200, Val Loss: 0.3528
+Total training time: 601.7563s
+
+Confusion Matrix:
+[[182100  11660   1209]
+ [  9308  31829  12455]
+ [   156    599   2384]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.95      0.93      0.94    194969
+           1       0.72      0.59      0.65     53592
+           2       0.15      0.76      0.25      3139
+
+    accuracy                           0.86    251700
+   macro avg       0.61      0.76      0.61    251700
+weighted avg       0.89      0.86      0.87    251700
+
+
+Global Accuracy: 0.8594
+Total evaluation time: 3.1057s
+Test Loss: 0.3547
+Testing configuration: batch_size=1024, num_epochs=30, learning_rate=0.001, dropout=0.5, hidden_size=[256, 128, 64]
+Epoch 1/30, Train Loss: 0.6172, Val Loss: 0.4189
+Epoch 2/30, Train Loss: 0.5483, Val Loss: 0.3790
+Epoch 3/30, Train Loss: 0.5267, Val Loss: 0.3865
+Epoch 4/30, Train Loss: 0.5156, Val Loss: 0.3506
+Epoch 5/30, Train Loss: 0.5099, Val Loss: 0.3510
+Epoch 6/30, Train Loss: 0.5056, Val Loss: 0.3754
+Epoch 7/30, Train Loss: 0.5023, Val Loss: 0.3736
+Epoch 8/30, Train Loss: 0.5001, Val Loss: 0.3463
+Epoch 9/30, Train Loss: 0.4979, Val Loss: 0.3342
+Epoch 10/30, Train Loss: 0.4963, Val Loss: 0.3513
+Epoch 11/30, Train Loss: 0.4947, Val Loss: 0.3561
+Epoch 12/30, Train Loss: 0.4938, Val Loss: 0.3546
+Epoch 13/30, Train Loss: 0.4925, Val Loss: 0.3865
+Epoch 14/30, Train Loss: 0.4917, Val Loss: 0.3666
+Epoch 15/30, Train Loss: 0.4910, Val Loss: 0.3913
+Epoch 16/30, Train Loss: 0.4896, Val Loss: 0.3528
+Epoch 17/30, Train Loss: 0.4891, Val Loss: 0.3430
+Epoch 18/30, Train Loss: 0.4883, Val Loss: 0.3896
+Epoch 19/30, Train Loss: 0.4881, Val Loss: 0.3405
+Epoch 20/30, Train Loss: 0.4867, Val Loss: 0.3296
+Epoch 21/30, Train Loss: 0.4862, Val Loss: 0.3808
+Epoch 22/30, Train Loss: 0.4869, Val Loss: 0.3577
+Epoch 23/30, Train Loss: 0.4850, Val Loss: 0.3547
+Epoch 24/30, Train Loss: 0.4853, Val Loss: 0.3585
+Epoch 25/30, Train Loss: 0.4838, Val Loss: 0.3361
+Epoch 26/30, Train Loss: 0.4840, Val Loss: 0.3393
+Epoch 27/30, Train Loss: 0.4835, Val Loss: 0.3527
+Epoch 28/30, Train Loss: 0.4826, Val Loss: 0.3790
+Epoch 29/30, Train Loss: 0.4825, Val Loss: 0.3559
+Epoch 30/30, Train Loss: 0.4825, Val Loss: 0.3593
+Total training time: 602.2792s
+
+Confusion Matrix:
+[[177872  14606   2491]
+ [  7891  34784  10917]
+ [   119    645   2375]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.96      0.91      0.93    194969
+           1       0.70      0.65      0.67     53592
+           2       0.15      0.76      0.25      3139
+
+    accuracy                           0.85    251700
+   macro avg       0.60      0.77      0.62    251700
+weighted avg       0.89      0.85      0.87    251700
+
+
+Global Accuracy: 0.8543
+Total evaluation time: 3.1099s
+Test Loss: 0.3607
+Testing configuration: batch_size=1024, num_epochs=30, learning_rate=0.001, dropout=0.5, hidden_size=[512, 256, 128]
+Epoch 1/30, Train Loss: 0.5898, Val Loss: 0.3955
+Epoch 2/30, Train Loss: 0.5270, Val Loss: 0.3957
+Epoch 3/30, Train Loss: 0.5051, Val Loss: 0.3626
+Epoch 4/30, Train Loss: 0.4924, Val Loss: 0.3432
+Epoch 5/30, Train Loss: 0.4847, Val Loss: 0.3985
+Epoch 6/30, Train Loss: 0.4788, Val Loss: 0.3558
+Epoch 7/30, Train Loss: 0.4739, Val Loss: 0.3855
+Epoch 8/30, Train Loss: 0.4711, Val Loss: 0.3872
+Epoch 9/30, Train Loss: 0.4686, Val Loss: 0.3429
+Epoch 10/30, Train Loss: 0.4658, Val Loss: 0.3740
+Epoch 11/30, Train Loss: 0.4629, Val Loss: 0.3596
+Epoch 12/30, Train Loss: 0.4615, Val Loss: 0.3562
+Epoch 13/30, Train Loss: 0.4592, Val Loss: 0.3429
+Epoch 14/30, Train Loss: 0.4576, Val Loss: 0.3474
+Epoch 15/30, Train Loss: 0.4560, Val Loss: 0.3567
+Epoch 16/30, Train Loss: 0.4543, Val Loss: 0.3722
+Epoch 17/30, Train Loss: 0.4528, Val Loss: 0.3263
+Epoch 18/30, Train Loss: 0.4524, Val Loss: 0.3739
+Epoch 19/30, Train Loss: 0.4505, Val Loss: 0.3801
+Epoch 20/30, Train Loss: 0.4502, Val Loss: 0.3409
+Epoch 21/30, Train Loss: 0.4497, Val Loss: 0.3566
+Epoch 22/30, Train Loss: 0.4485, Val Loss: 0.3297
+Epoch 23/30, Train Loss: 0.4476, Val Loss: 0.3454
+Epoch 24/30, Train Loss: 0.4467, Val Loss: 0.3301
+Epoch 25/30, Train Loss: 0.4460, Val Loss: 0.3377
+Epoch 26/30, Train Loss: 0.4449, Val Loss: 0.3304
+Epoch 27/30, Train Loss: 0.4441, Val Loss: 0.3344
+Epoch 28/30, Train Loss: 0.4429, Val Loss: 0.3369
+Epoch 29/30, Train Loss: 0.4427, Val Loss: 0.3638
+Epoch 30/30, Train Loss: 0.4420, Val Loss: 0.3726
+Total training time: 610.4468s
+
+Confusion Matrix:
+[[174950  16211   3808]
+ [  7140  36207  10245]
+ [   106    653   2380]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.96      0.90      0.93    194969
+           1       0.68      0.68      0.68     53592
+           2       0.14      0.76      0.24      3139
+
+    accuracy                           0.85    251700
+   macro avg       0.60      0.78      0.62    251700
+weighted avg       0.89      0.85      0.87    251700
+
+
+Global Accuracy: 0.8484
+Total evaluation time: 2.9585s
+Test Loss: 0.3739
+Testing configuration: batch_size=1024, num_epochs=30, learning_rate=0.0001, dropout=0.5, hidden_size=[128, 64, 32]
+Epoch 1/30, Train Loss: 0.8140, Val Loss: 0.5246
+Epoch 2/30, Train Loss: 0.6868, Val Loss: 0.4782
+Epoch 3/30, Train Loss: 0.6551, Val Loss: 0.4734
+Epoch 4/30, Train Loss: 0.6370, Val Loss: 0.4580
+Epoch 5/30, Train Loss: 0.6242, Val Loss: 0.4581
+Epoch 6/30, Train Loss: 0.6146, Val Loss: 0.4552
+Epoch 7/30, Train Loss: 0.6066, Val Loss: 0.4432
+Epoch 8/30, Train Loss: 0.6004, Val Loss: 0.4436
+Epoch 9/30, Train Loss: 0.5947, Val Loss: 0.4297
+Epoch 10/30, Train Loss: 0.5901, Val Loss: 0.4285
+Epoch 11/30, Train Loss: 0.5855, Val Loss: 0.4238
+Epoch 12/30, Train Loss: 0.5813, Val Loss: 0.4200
+Epoch 13/30, Train Loss: 0.5773, Val Loss: 0.4077
+Epoch 14/30, Train Loss: 0.5731, Val Loss: 0.4093
+Epoch 15/30, Train Loss: 0.5702, Val Loss: 0.4029
+Epoch 16/30, Train Loss: 0.5659, Val Loss: 0.3958
+Epoch 17/30, Train Loss: 0.5630, Val Loss: 0.3841
+Epoch 18/30, Train Loss: 0.5595, Val Loss: 0.3868
+Epoch 19/30, Train Loss: 0.5570, Val Loss: 0.3859
+Epoch 20/30, Train Loss: 0.5540, Val Loss: 0.3859
+Epoch 21/30, Train Loss: 0.5512, Val Loss: 0.3880
+Epoch 22/30, Train Loss: 0.5493, Val Loss: 0.3748
+Epoch 23/30, Train Loss: 0.5477, Val Loss: 0.3957
+Epoch 24/30, Train Loss: 0.5456, Val Loss: 0.3738
+Epoch 25/30, Train Loss: 0.5438, Val Loss: 0.3824
+Epoch 26/30, Train Loss: 0.5421, Val Loss: 0.3810
+Epoch 27/30, Train Loss: 0.5410, Val Loss: 0.3703
+Epoch 28/30, Train Loss: 0.5394, Val Loss: 0.3753
+Epoch 29/30, Train Loss: 0.5385, Val Loss: 0.3676
+Epoch 30/30, Train Loss: 0.5379, Val Loss: 0.3836
+Total training time: 601.6564s
+
+Confusion Matrix:
+[[178263  15206   1500]
+ [  7996  32926  12670]
+ [   142    641   2356]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.96      0.91      0.93    194969
+           1       0.68      0.61      0.64     53592
+           2       0.14      0.75      0.24      3139
+
+    accuracy                           0.85    251700
+   macro avg       0.59      0.76      0.61    251700
+weighted avg       0.89      0.85      0.86    251700
+
+
+Global Accuracy: 0.8484
+Total evaluation time: 3.0999s
+Test Loss: 0.3858
+Testing configuration: batch_size=1024, num_epochs=30, learning_rate=0.0001, dropout=0.5, hidden_size=[256, 128, 64]
+Epoch 1/30, Train Loss: 0.7533, Val Loss: 0.4969
+Epoch 2/30, Train Loss: 0.6440, Val Loss: 0.4613
+Epoch 3/30, Train Loss: 0.6170, Val Loss: 0.4483
+Epoch 4/30, Train Loss: 0.6010, Val Loss: 0.4376
+Epoch 5/30, Train Loss: 0.5895, Val Loss: 0.4398
+Epoch 6/30, Train Loss: 0.5804, Val Loss: 0.4301
+Epoch 7/30, Train Loss: 0.5726, Val Loss: 0.4237
+Epoch 8/30, Train Loss: 0.5655, Val Loss: 0.4145
+Epoch 9/30, Train Loss: 0.5588, Val Loss: 0.4037
+Epoch 10/30, Train Loss: 0.5531, Val Loss: 0.4040
+Epoch 11/30, Train Loss: 0.5479, Val Loss: 0.4061
+Epoch 12/30, Train Loss: 0.5434, Val Loss: 0.3952
+Epoch 13/30, Train Loss: 0.5393, Val Loss: 0.3966
+Epoch 14/30, Train Loss: 0.5354, Val Loss: 0.3800
+Epoch 15/30, Train Loss: 0.5317, Val Loss: 0.3774
+Epoch 16/30, Train Loss: 0.5280, Val Loss: 0.3728
+Epoch 17/30, Train Loss: 0.5251, Val Loss: 0.3680
+Epoch 18/30, Train Loss: 0.5220, Val Loss: 0.3713
+Epoch 19/30, Train Loss: 0.5196, Val Loss: 0.3655
+Epoch 20/30, Train Loss: 0.5172, Val Loss: 0.3703
+Epoch 21/30, Train Loss: 0.5151, Val Loss: 0.3691
+Epoch 22/30, Train Loss: 0.5130, Val Loss: 0.3791
+Epoch 23/30, Train Loss: 0.5113, Val Loss: 0.3690
+Epoch 24/30, Train Loss: 0.5092, Val Loss: 0.3675
+Epoch 25/30, Train Loss: 0.5076, Val Loss: 0.3643
+Epoch 26/30, Train Loss: 0.5058, Val Loss: 0.3661
+Epoch 27/30, Train Loss: 0.5050, Val Loss: 0.3627
+Epoch 28/30, Train Loss: 0.5038, Val Loss: 0.3629
+Epoch 29/30, Train Loss: 0.5027, Val Loss: 0.3695
+Epoch 30/30, Train Loss: 0.5010, Val Loss: 0.3563
+Total training time: 602.4421s
+
+Confusion Matrix:
+[[181559  11833   1577]
+ [  8921  32887  11784]
+ [   146    620   2373]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.95      0.93      0.94    194969
+           1       0.73      0.61      0.66     53592
+           2       0.15      0.76      0.25      3139
+
+    accuracy                           0.86    251700
+   macro avg       0.61      0.77      0.62    251700
+weighted avg       0.89      0.86      0.87    251700
+
+
+Global Accuracy: 0.8614
+Total evaluation time: 3.0991s
+Test Loss: 0.3585
+Testing configuration: batch_size=1024, num_epochs=30, learning_rate=0.0001, dropout=0.5, hidden_size=[512, 256, 128]
+Epoch 1/30, Train Loss: 0.6927, Val Loss: 0.4593
+Epoch 2/30, Train Loss: 0.6087, Val Loss: 0.4531
+Epoch 3/30, Train Loss: 0.5865, Val Loss: 0.4372
+Epoch 4/30, Train Loss: 0.5729, Val Loss: 0.4326
+Epoch 5/30, Train Loss: 0.5630, Val Loss: 0.4296
+Epoch 6/30, Train Loss: 0.5544, Val Loss: 0.4243
+Epoch 7/30, Train Loss: 0.5466, Val Loss: 0.4143
+Epoch 8/30, Train Loss: 0.5394, Val Loss: 0.4089
+Epoch 9/30, Train Loss: 0.5332, Val Loss: 0.3945
+Epoch 10/30, Train Loss: 0.5274, Val Loss: 0.3966
+Epoch 11/30, Train Loss: 0.5219, Val Loss: 0.3854
+Epoch 12/30, Train Loss: 0.5175, Val Loss: 0.3787
+Epoch 13/30, Train Loss: 0.5129, Val Loss: 0.3856
+Epoch 14/30, Train Loss: 0.5090, Val Loss: 0.3841
+Epoch 15/30, Train Loss: 0.5047, Val Loss: 0.3678
+Epoch 16/30, Train Loss: 0.5012, Val Loss: 0.3805
+Epoch 17/30, Train Loss: 0.4976, Val Loss: 0.3694
+Epoch 18/30, Train Loss: 0.4945, Val Loss: 0.3725
+Epoch 19/30, Train Loss: 0.4917, Val Loss: 0.3886
+Epoch 20/30, Train Loss: 0.4886, Val Loss: 0.3717
+Epoch 21/30, Train Loss: 0.4862, Val Loss: 0.3730
+Epoch 22/30, Train Loss: 0.4839, Val Loss: 0.3681
+Epoch 23/30, Train Loss: 0.4813, Val Loss: 0.3582
+Epoch 24/30, Train Loss: 0.4796, Val Loss: 0.3657
+Epoch 25/30, Train Loss: 0.4779, Val Loss: 0.3690
+Epoch 26/30, Train Loss: 0.4757, Val Loss: 0.3737
+Epoch 27/30, Train Loss: 0.4740, Val Loss: 0.3627
+Epoch 28/30, Train Loss: 0.4722, Val Loss: 0.3739
+Epoch 29/30, Train Loss: 0.4704, Val Loss: 0.3654
+Epoch 30/30, Train Loss: 0.4694, Val Loss: 0.3662
+Total training time: 610.3472s
+
+Confusion Matrix:
+[[178977  13203   2789]
+ [  8150  33536  11906]
+ [   120    603   2416]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.96      0.92      0.94    194969
+           1       0.71      0.63      0.66     53592
+           2       0.14      0.77      0.24      3139
+
+    accuracy                           0.85    251700
+   macro avg       0.60      0.77      0.61    251700
+weighted avg       0.89      0.85      0.87    251700
+
+
+Global Accuracy: 0.8539
+Total evaluation time: 3.1264s
+Test Loss: 0.3685
+Best configuration: {'num_epochs': 20, 'learning_rate': 0.001, 'hidden_sizes': [128, 64, 32], 'dropout': 0.5, 'batch_size': 1024} with accuracy: 0.8696
