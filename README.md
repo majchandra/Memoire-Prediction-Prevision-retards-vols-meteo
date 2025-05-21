@@ -68,18 +68,3 @@ Le modèle **Liquid Neural Network** présente un fort potentiel malgré ses lim
 - Matplotlib, Seaborn
 
 - Jupyter Notebook
-
-
-
----
-
-## 📂 Structure du projet
-
-```bash
-📁 data/               # Jeux de données bruts et transformés
-📁 notebooks/          # Notebooks d'analyse, de prétraitement, de modélisation
-📁 models/             # Entraînements, hyperparamètres, modèles sauvegardés
-📁 reports/            # Résultats, figures, matrice de confusion, métriques
-📄 main.py             # Script principal d'entraînement / évaluation
-📄 requirements.txt    # Dépendances Python
-
